@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #00ff9f;
+  --color-neon-red: #ff4d4d;
+  --color-dark-bg: #0a0a0a;
+  --color-card-bg: #111111;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .neon-glow {
+    box-shadow: 0 0 15px rgba(0, 255, 159, 0.3);
+  }
+  .neon-border {
+    @apply border border-neon-green/20;
+  }
+  .neon-button {
+    @apply bg-neon-green text-black font-bold py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,255,159,0.5)];
+  }
+}
